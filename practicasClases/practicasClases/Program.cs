@@ -65,6 +65,56 @@ namespace practicasClases
                 }
             }
         }
+        /*funcion que calcule mínimo, máx y la media que hay dentro del array*/
+        public static int CalculateMin(int [] number)
+        {
+            int contador = number[0];
+            for (int i = 0; i < number.Length; i++)
+            {
+                if (contador > number[i])
+                {
+                    contador = number[i];
+                }
+            }
+            return contador;
+        }
+        public static int CalculateMax(int[] number)
+        {
+            int contador = number[0];
+            for (int i = 0; i < number.Length; i++)
+            {
+                if (contador < number[i])
+                {
+                    contador = number[i];
+                }
+            }
+            return contador;
+        }
+        public static int CalculateMedia(int[] number)
+        {
+            int contador = 0;
+            for (int i = 0; i < number.Length; i++)
+            {
+                if (contador < number[i])
+                {
+                    contador = number[i];
+                }
+            }
+            return contador;
+        }
+        /*funcion que ordene los valores*/
+        public static int OrderNumbers(int[] vect, int a)
+        {
+            int contador = vect[0];
+            for (int i =a+1; i < vect.Length; i++)
+            {
+                if (contador > vect[i])
+                {
+                    contador = i;
+                }
+            }
+            return contador;
+        }
         public static void PruebaBusqueda()
         {
             //buscar el array que pda el usuario, luego se le informa donde se ha encontrado (BUSQUEDA ARRAY)
@@ -82,11 +132,11 @@ namespace practicasClases
                 }
                 //si el n esta repetido y cuantas veces esta repetido
 
-                int contador = 0;
+                /*int contador = 0;
                 else if (miArray[k] == lugarArray)
                 {
                     contador++;
-                }
+                }*/
             }
             Console.WriteLine("El número no ha sido encontrado");
             mi_etiqueta: Console.WriteLine("El número introducido no esta en el array");
@@ -102,7 +152,25 @@ namespace practicasClases
             //InicialisarArray();
             //DiasSemana();
             //ArrayInteger();
-            PruebaBusqueda();
+            //PruebaBusqueda();
+            int[] num = { 3, 9, 8, 7, 60 };
+            int valor = CalculateMin(num);
+            /*Console.WriteLine("El valor mínimo es {0}: "+valor);
+            int valor2 = CalculateMax(num);
+            Console.WriteLine("El valor máximo es {0}: " + valor2);
+            int valor3 = CalculateMedia(num);
+            Console.WriteLine("El valor máximo es {0}: " + valor3);*/
+
+            int valor4 = 0;
+            int aux = 0;
+            for(int i=0;i<num.Length;i++)
+            {
+                //podría ser con un if
+                valor4 = OrderNumbers(num, i);
+                aux = num[i];
+                num[i] = num[valor4];
+                num[valor4] = aux;
+            }
         }
     }
 }
