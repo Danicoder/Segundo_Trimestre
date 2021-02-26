@@ -142,6 +142,8 @@ namespace practicasClases
             mi_etiqueta: Console.WriteLine("El número introducido no esta en el array");
 
         }
+        /*for detro de otro que no se ejecuta*/
+
         static void Main()
         {
             /*
@@ -161,7 +163,7 @@ namespace practicasClases
             int valor3 = CalculateMedia(num);
             Console.WriteLine("El valor máximo es {0}: " + valor3);*/
 
-            int valor4 = 0;
+            /*int valor4 = 0;
             int aux = 0;
             for(int i=0;i<num.Length;i++)
             {
@@ -170,7 +172,8 @@ namespace practicasClases
                 aux = num[i];
                 num[i] = num[valor4];
                 num[valor4] = aux;
-            }
+            }*/
+            listas.PilaPiramide();
         }
     }
 }
