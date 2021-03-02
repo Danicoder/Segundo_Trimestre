@@ -4,7 +4,7 @@ using System.Text;
 
 namespace practicasClases
 {
-    class listas //más reserva dinámicas de memoria
+    class PilaCola //más reserva dinámicas de memoria
     {
          public static void PilaPiramide()
          {
@@ -24,18 +24,46 @@ namespace practicasClases
             }
             Console.WriteLine(mipila.Pop());
          }
+        public static void NotacionPolaca()
+        {
+            Stack<int> mipila = new Stack<int>();/*para los numeros*/
+            Queue<char> micola = new Queue<char>(); /*para las operaciones*/
+
+            string aux;
+           
+            do
+            {
+                incrementa:
+                Console.WriteLine("introduce el número (enter para acabar)");
+                aux = Console.ReadLine();
+                
+                if (aux != "")
+                {
+                    mipila.Push(Convert.ToInt32(aux));
+                }
+                else if (mipila.Count == 1 && aux=="")
+                {
+                    Console.WriteLine("se necesita mínimo otro valor. Pulse enter para continuar");
+                    aux = Console.ReadLine();
+                    goto incrementa;
+                    
+                }
+            }
+            while (aux != ""); //para que cómo mínimo me pida dos valores
+
+            for (int i = 0; i < mipila.Count - 1; i++)
+            {
+                Console.WriteLine("introduce el operador  (enter para acabar)");
+                micola.Enqueue(Convert.ToChar(Console.ReadLine()));
+            }
+        }
     }
     /*  Calculadora de notacion polaca =-*266  numeros cola operadores pila(-*)
      el primer signo calculo los dos primeros números
      -+*-++7312121020
     guardar datos con pop  y luego un push con el resultado para que al final el contador quede a uno que será el resultado final*/
 
-    public static void NotacionPolaca()
-    {
-        Stack<string> mipila = new Stack<string>();
-        Console.WriteLine("introduce el número");
-        int contador = Convert.ToInt32(Console.ReadLine());
-    }
+    
     /*Stack<string> mi_pila = new Stack<string>;
           Tipo de dato  nombre_variable =  TD
 

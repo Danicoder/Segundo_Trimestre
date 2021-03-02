@@ -173,7 +173,8 @@ namespace practicasClases
                 num[i] = num[valor4];
                 num[valor4] = aux;
             }*/
-            listas.PilaPiramide();
+            //PilaCola.PilaPiramide();
+            PilaCola.NotacionPolaca();
         }
     }
 }
