@@ -30,8 +30,8 @@ namespace practicasClases
             Queue<char> micola = new Queue<char>(); /*para las operaciones*/
 
             string aux;
-           
-            do
+
+            do //para que cómo mínimo me pida dos valores
             {
                 incrementa:
                 Console.WriteLine("introduce el número (enter para acabar)");
@@ -41,21 +41,60 @@ namespace practicasClases
                 {
                     mipila.Push(Convert.ToInt32(aux));
                 }
-                else if (mipila.Count == 1 && aux=="")
+                else if (mipila.Count <= 1 && aux=="")
                 {
-                    Console.WriteLine("se necesita mínimo otro valor. Pulse enter para continuar");
-                    aux = Console.ReadLine();
+                    Console.WriteLine("se necesita mínimo 2 valores.");
+           
                     goto incrementa;
                     
                 }
             }
-            while (aux != ""); //para que cómo mínimo me pida dos valores
+            while (aux != ""); 
 
             for (int i = 0; i < mipila.Count - 1; i++)
             {
                 Console.WriteLine("introduce el operador  (enter para acabar)");
                 micola.Enqueue(Convert.ToChar(Console.ReadLine()));
             }
+
+            string car;
+            do
+            {
+                intenta:
+                Console.WriteLine("introduce el operador  (enter para acabar)");
+                car =Console.ReadLine();
+
+                if (car == "+" || car == "-" || car == "*" || car == "/")
+                {
+                    micola.Enqueue(Convert.ToChar(car));
+                }
+                else
+                {
+                    Console.WriteLine("operación incorrecta");
+                    goto intenta;
+                }
+            }
+            while (micola.Count < mipila.Count-1);
+
+
+            //primero desapilamos para volver a apilar
+            variable1 = mipila.Pop();
+            variable2 = mipila.Pop();
+            variable3 = micola.Enqueue(Convert.ToChar());
+
+            if (variable3 == '+')
+            {
+
+            }
+            else if (variable3 = '*')
+            {
+                variable2 = variable2 * variable1;
+            }
+            else if (variable3 = '/')
+            {
+
+            }
+            else (variable3 = '-');
         }
     }
     /*  Calculadora de notacion polaca =-*266  numeros cola operadores pila(-*)
