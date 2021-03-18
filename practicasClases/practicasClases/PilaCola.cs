@@ -78,7 +78,7 @@ namespace practicasClases
 
 
             //primero desapilamos para volver a apilar
-            variable1 = mipila.Pop();
+           /* variable1 = mipila.Pop();
             variable2 = mipila.Pop();
             variable3 = micola.Enqueue(Convert.ToChar());
 
@@ -94,7 +94,7 @@ namespace practicasClases
             {
 
             }
-            else (variable3 = '-');
+            else (variable3 = '-');*/
         }
     }
     /*  Calculadora de notacion polaca =-*266  numeros cola operadores pila(-*)

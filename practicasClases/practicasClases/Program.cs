@@ -175,6 +175,9 @@ namespace practicasClases
             }*/
             //PilaCola.PilaPiramide();
             PilaCola.NotacionPolaca();
+
+            Console.WriteLine("Escribe tú DNI");
+            string DNI = Listas.ComprobarDatos(Console.ReadLine());
         }
     }
 }
