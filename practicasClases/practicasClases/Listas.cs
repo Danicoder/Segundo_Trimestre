@@ -38,19 +38,6 @@ namespace practicasClases
             Console.WriteLine("Escribe cúal fue la cantidad del prestamo");
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
         //numero primo que de su divicion de resto o, divicion entera
         /*1º localizo primos en A (antes debo recorrer A)
          2º Para cada elemento de A ver si es primo
