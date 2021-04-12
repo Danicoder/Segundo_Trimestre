@@ -1,29 +1,28 @@
 ﻿using System;
 using System.Collections.Generic; //nops sirve para trabajar con pilas
-using System.Text;
 
 namespace practicasClases
 {
     class PilaCola //más reserva dinámicas de memoria
     {
-         public static void PilaPiramide()
-         {
+        public static void PilaPiramide()
+        {
             Stack<string> mipila = new Stack<string>();
             Console.WriteLine("Introduce número");
-            int contador =Convert.ToInt32(Console.ReadLine());
+            int contador = Convert.ToInt32(Console.ReadLine());
 
             string micadena = "";
-            for (int i = 0; i < contador ;i++)
+            for (int i = 0; i < contador; i++)
             {
                 micadena = "";
-                for(int j=i; j<contador;j++)
+                for (int j = i; j < contador; j++)
                 {
                     micadena = micadena + "";
                 }
                 mipila.Push(micadena); //pila
             }
             Console.WriteLine(mipila.Pop());
-         }
+        }
         public static void NotacionPolaca()
         {
             Stack<int> mipila = new Stack<int>();/*para los numeros*/
@@ -33,23 +32,23 @@ namespace practicasClases
 
             do //para que cómo mínimo me pida dos valores
             {
-                incrementa:
+            incrementa:
                 Console.WriteLine("introduce el número (enter para acabar)");
                 aux = Console.ReadLine();
-                
+
                 if (aux != "")
                 {
                     mipila.Push(Convert.ToInt32(aux));
                 }
-                else if (mipila.Count <= 1 && aux=="")
+                else if (mipila.Count <= 1 && aux == "")
                 {
                     Console.WriteLine("se necesita mínimo 2 valores.");
-           
+
                     goto incrementa;
-                    
+
                 }
             }
-            while (aux != ""); 
+            while (aux != "");
 
             for (int i = 0; i < mipila.Count - 1; i++)
             {
@@ -60,9 +59,9 @@ namespace practicasClases
             string car;
             do
             {
-                intenta:
+            intenta:
                 Console.WriteLine("introduce el operador  (enter para acabar)");
-                car =Console.ReadLine();
+                car = Console.ReadLine();
 
                 if (car == "+" || car == "-" || car == "*" || car == "/")
                 {
@@ -74,27 +73,27 @@ namespace practicasClases
                     goto intenta;
                 }
             }
-            while (micola.Count < mipila.Count-1);
+            while (micola.Count < mipila.Count - 1);
 
 
             //primero desapilamos para volver a apilar
-           /* variable1 = mipila.Pop();
-            variable2 = mipila.Pop();
-            variable3 = micola.Enqueue(Convert.ToChar());
+            /* variable1 = mipila.Pop();
+             variable2 = mipila.Pop();
+             variable3 = micola.Enqueue(Convert.ToChar());
 
-            if (variable3 == '+')
-            {
+             if (variable3 == '+')
+             {
 
-            }
-            else if (variable3 = '*')
-            {
-                variable2 = variable2 * variable1;
-            }
-            else if (variable3 = '/')
-            {
+             }
+             else if (variable3 = '*')
+             {
+                 variable2 = variable2 * variable1;
+             }
+             else if (variable3 = '/')
+             {
 
-            }
-            else (variable3 = '-');*/
+             }
+             else (variable3 = '-');*/
         }
     }
     /*  Calculadora de notacion polaca =-*266  numeros cola operadores pila(-*)
@@ -102,7 +101,7 @@ namespace practicasClases
      -+*-++7312121020
     guardar datos con pop  y luego un push con el resultado para que al final el contador quede a uno que será el resultado final*/
 
-    
+
     /*Stack<string> mi_pila = new Stack<string>;
           Tipo de dato  nombre_variable =  TD
 

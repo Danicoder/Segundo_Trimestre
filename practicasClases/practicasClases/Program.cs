@@ -7,7 +7,7 @@ namespace practicasClases
         public static void Array()
         {
             string[] unarray = new string[5];
-            for(int i=0; i < 5;i++)
+            for (int i = 0; i < 5; i++)
                 Console.WriteLine(unarray[i]);
             Console.WriteLine("aquí las 6 filas");
         }
@@ -18,12 +18,12 @@ namespace practicasClases
             miarray[3] = 4;
             Console.WriteLine(miarray);
         }
-        public static void DiasSemana() 
+        public static void DiasSemana()
         {
             string[] diaSemana = new string[7] { "lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo" };
             //string[] diaSemana = { "lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo" };
 
-            Console.WriteLine("aquí los días de la semana: "+ diaSemana.Length);
+            Console.WriteLine("aquí los días de la semana: " + diaSemana.Length);
         }
 
         /*Array de enteros que indique el tamaño del array, indicado por el usuario
@@ -39,9 +39,9 @@ namespace practicasClases
             {
                 try
                 {
-                    
 
-                        Console.WriteLine("  introduzca el valor para la celda {0}: \n", i);
+
+                    Console.WriteLine("  introduzca el valor para la celda {0}: \n", i);
                     valorArray[i] = Convert.ToInt32(Console.ReadLine());
 
                     Console.Write("El array introducido es: ");
@@ -66,7 +66,7 @@ namespace practicasClases
             }
         }
         /*funcion que calcule mínimo, máx y la media que hay dentro del array*/
-        public static int CalculateMin(int [] number)
+        public static int CalculateMin(int[] number)
         {
             int contador = number[0];
             for (int i = 0; i < number.Length; i++)
@@ -106,7 +106,7 @@ namespace practicasClases
         public static int OrderNumbers(int[] vect, int a)
         {
             int contador = vect[0];
-            for (int i =a+1; i < vect.Length; i++)
+            for (int i = a + 1; i < vect.Length; i++)
             {
                 if (contador > vect[i])
                 {
@@ -120,7 +120,7 @@ namespace practicasClases
             //buscar el array que pda el usuario, luego se le informa donde se ha encontrado (BUSQUEDA ARRAY)
             Console.WriteLine("Introduce el valor a buscar");
             int lugarArray = Convert.ToInt32(Console.ReadLine());
-            int [] miArray = {2,3,7,8 };
+            int[] miArray = { 2, 3, 7, 8 };
 
             for (int k = 0; k < miArray.Length; k++)
             {
@@ -139,7 +139,7 @@ namespace practicasClases
                 }*/
             }
             Console.WriteLine("El número no ha sido encontrado");
-            mi_etiqueta: Console.WriteLine("El número introducido no esta en el array");
+        mi_etiqueta: Console.WriteLine("El número introducido no esta en el array");
 
         }
         /*for detro de otro que no se ejecuta*/

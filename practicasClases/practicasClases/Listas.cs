@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace practicasClases
 {
@@ -19,7 +17,7 @@ namespace practicasClases
 
             letraDNI = char.ToUpper(DNI[8]);
 
-            
+
             Console.WriteLine("Error DNI");
             num_DNI = DNI.Remove(8, 2);
             if (Comprobar(dni) != 9)
@@ -35,24 +33,24 @@ namespace practicasClases
             {
                 DNI = Console.ReadLine();
             }
-            
+
 
             Console.WriteLine("Escribe cúal fue la cantidad del prestamo");
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         //numero primo que de su divicion de resto o, divicion entera
         /*1º localizo primos en A (antes debo recorrer A)
          2º Para cada elemento de A ver si es primo
